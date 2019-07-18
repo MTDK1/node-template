@@ -30,7 +30,7 @@ network = { package = "substrate-network", git = 'https://github.com/paritytech/
 consensus = { package = "substrate-consensus-aura", git = 'https://github.com/paritytech/substrate.git', rev = '6dc833c42ebb89a2684ed04be4689164eb59ca97' }
 substrate-client = {  git = 'https://github.com/paritytech/substrate.git', rev = '6dc833c42ebb89a2684ed04be4689164eb59ca97' }
 basic-authorship = { package = "substrate-basic-authorship", git = 'https://github.com/paritytech/substrate.git', rev = '6dc833c42ebb89a2684ed04be4689164eb59ca97' }
-node-template-runtime = { git = 'https://github.com/paritytech/substrate.git', rev = '6dc833c42ebb89a2684ed04be4689164eb59ca97' }
+node-template-runtime = { path ="runtime" }
 
 [build-dependencies]
 vergen = "3"
