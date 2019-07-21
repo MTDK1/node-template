@@ -50,6 +50,5 @@ std = [
 	"safe-mix/std",
 	"consensus-aura/std",
 	"offchain-primitives/std",
-	# "tcr/std",
 ]
 no_std = []

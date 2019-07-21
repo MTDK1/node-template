@@ -498,17 +498,10 @@ mod tests {
     type BlockNumber = u64;
     type Hash = H256;
     type Hashing = BlakeTwo256;
-    type Digest = Digest;
     type AccountId = u64;
     type Lookup = IdentityLookup<u64>;
     type Header = Header;
     type Event = ();
-    type Log = DigestItem;
-  }
-  impl consensus::Trait for Test {
-    type Log = DigestItem;
-    type SessionKey = UintAuthorityId;
-    type InherentOfflineReport = ();
   }
   impl token::Trait for Test {
     type Event = ();
@@ -526,12 +519,12 @@ mod tests {
 
   // builds the genesis config store and sets mock values
   fn new_test_ext() -> runtime_io::TestExternalities<Blake2Hasher> {
-    let mut t = system::GenesisConfig::<Test>::default()
-      .build_storage()
+    let mut t = system::GenesisConfig::default()
+      .build_storage::<Test>()
       .unwrap()
       .0;
     t.extend(
-      token::GenesisConfig::<Test> { total_supply: 1000 }
+      token::GenesisConfig::<Test>{ total_supply: 1000 }
         .build_storage()
         .unwrap()
         .0,
