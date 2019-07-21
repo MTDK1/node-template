@@ -1,7 +1,7 @@
 use primitives::{ed25519, sr25519, Pair};
 use node_template_runtime::{
 	AccountId, GenesisConfig, AuraConfig, TimestampConfig, BalancesConfig,
-	SudoConfig, IndicesConfig, SystemConfig, WASM_BINARY, AuraId,ExampleConfig
+	SudoConfig, IndicesConfig, SystemConfig, WASM_BINARY, AuraId, TokenConfig, TcrConfig
 };
 use substrate_service;
 
@@ -110,10 +110,15 @@ fn testnet_genesis(initial_authorities: Vec<AuraId>, endowed_accounts: Vec<Accou
 		sudo: Some(SudoConfig {
 			key: root_key,
 		}),
-		example:Some(ExampleConfig {
-			bar: Default::default(),
-			dummy: Default::default(),
-			foo: Default::default()
+		token: Some(TokenConfig {
+			total_supply: 0,
+		}),
+		tcr: Some(TcrConfig {
+			owner: endowed_accounts[0].clone(),
+			poll_nonce: 0,
+			apply_stage_len: 4,
+			commit_stage_len: 4,
+			min_deposit: 1
 		}),
 	}
 }

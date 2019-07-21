@@ -60,6 +60,8 @@ pub type Nonce = u64;
 /// Used for the module template in `./template.rs`
 mod template;
 
+mod tcr;
+mod token;
 // pub use example;
 
 /// Opaque types. These are used by the CLI to instantiate machinery that don't need to know
@@ -196,8 +198,13 @@ impl template::Trait for Runtime {
 	type Event = Event;
 }
 
-impl example::Trait for Runtime {
+impl tcr::Trait for Runtime {
 	type Event = Event;
+}
+
+impl token::Trait for Runtime {
+	type Event = Event;
+	type TokenBalance = u128;
 }
 
 construct_runtime!(
@@ -214,7 +221,8 @@ construct_runtime!(
 		Sudo: sudo,
 		// Used for the module template in `./template.rs`
 		TemplateModule: template::{Module, Call, Storage, Event<T>},
-		Example: example::{Module, Call, Storage, Event<T>, Config<T>},
+		Tcr: tcr::{Module, Call, Storage, Event<T>, Config<T>},
+		Token: token::{Module, Call, Storage, Event<T>, Config<T>},
 	}
 );
 
