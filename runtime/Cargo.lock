@@ -1395,6 +1395,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "mtdk1-srml-tcr"
+version = "2.0.0"
+dependencies = [
+ "parity-codec 4.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.97 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sr-io 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=6dc833c42ebb89a2684ed04be4689164eb59ca97)",
+ "sr-primitives 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=6dc833c42ebb89a2684ed04be4689164eb59ca97)",
+ "sr-std 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=6dc833c42ebb89a2684ed04be4689164eb59ca97)",
+ "srml-support 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=6dc833c42ebb89a2684ed04be4689164eb59ca97)",
+ "srml-system 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=6dc833c42ebb89a2684ed04be4689164eb59ca97)",
+ "srml-timestamp 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=6dc833c42ebb89a2684ed04be4689164eb59ca97)",
+ "substrate-primitives 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=6dc833c42ebb89a2684ed04be4689164eb59ca97)",
+ "substrate-wasm-builder-runner 1.0.1 (git+https://github.com/paritytech/substrate.git?rev=6dc833c42ebb89a2684ed04be4689164eb59ca97)",
+]
+
+[[package]]
 name = "multistream-select"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1422,6 +1438,7 @@ dependencies = [
 name = "node-template-runtime"
 version = "2.0.0"
 dependencies = [
+ "mtdk1-srml-tcr 2.0.0",
  "parity-codec 4.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "safe-mix 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.97 (registry+https://github.com/rust-lang/crates.io-index)",

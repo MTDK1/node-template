@@ -1,3 +1,7 @@
 [submodule "srml/example"]
 	path = srml/example
 	url = git@github.com:MTDK1/srml-example.git
+
+[submodule "srml/tcr"]
+  path = srml/tcr
+  url  = git@github.com:MTDK1/srml-tcr.git
