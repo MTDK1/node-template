@@ -111,7 +111,7 @@ fn testnet_genesis(initial_authorities: Vec<AuraId>, endowed_accounts: Vec<Accou
 			key: root_key,
 		}),
 		token: Some(TokenConfig {
-			total_supply: 0,
+			total_supply: 100_000_000,
 		}),
 		tcr: Some(TcrConfig {
 			owner: endowed_accounts[0].clone(),

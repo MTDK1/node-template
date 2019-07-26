@@ -1407,7 +1407,6 @@ dependencies = [
  "srml-system 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=6dc833c42ebb89a2684ed04be4689164eb59ca97)",
  "srml-timestamp 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=6dc833c42ebb89a2684ed04be4689164eb59ca97)",
  "substrate-primitives 2.0.0 (git+https://github.com/paritytech/substrate.git?rev=6dc833c42ebb89a2684ed04be4689164eb59ca97)",
- "substrate-wasm-builder-runner 1.0.1 (git+https://github.com/paritytech/substrate.git?rev=6dc833c42ebb89a2684ed04be4689164eb59ca97)",
 ]
 
 [[package]]
